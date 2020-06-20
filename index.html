@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F1 API</title>
+    <link rel="stylesheet" type="text/css" href="f1.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>    
 </head>
 <body>
+
+    <h1>Formula 1 Results API</h1>
+    <p>Enter the year and round number in the fields below to search the results archive. Depending on the year, the Championship has consisted of between 7 and 20 races.</br>The results are taken from the API on <a href="https://ergast.com/mrd/">https://ergast.com/mrd/</a>.</p>
+
+    <ul>
+        <li>Results include a full history of the World Championships from 1950.</li>
+        <li>The rules relating to points scoring positions have changed multiple times; the results below reflect the more recent trend of giving points to the top 10 and not just the top 6.</li>
+        <li>Qualifying (i.e. pole position) results are only avaialable from around the year 1994 onwards.</li>
+    </ul>
+
+    </br>
 
     <input type="text" id="year-bar" placeholder="Year"></br>
     <input type="text" id="event-bar"placeholder="Round number">
