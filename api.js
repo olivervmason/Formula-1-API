@@ -27,12 +27,25 @@ searchBtn.addEventListener("click", async () => {
     const result = await getResult(roundSelected.value, yearSelected.value)
     // jsonResult = JSON.parse(result)
 
-    console.dir(result.MRData.RaceTable.Races[0].Results[0].Driver.driverId)
-
+    console.dir(result.MRData.RaceTable.Races[0].Results[0].Driver.givenName)
+    console.dir(result.MRData.RaceTable.Races[0].Results[0].Driver.familyName)
     // Get result detail
+    const hostcountry = result.MRData.RaceTable.Races[0].Circuit.Location.country
+    const venue = result.MRData.RaceTable.Races[0].Circuit.circuitName
+
+    host.innerHTML = `Host country: ${hostcountry}`
+    circuit.innerHTML = `Track name: ${venue}`
+
     // const winner = result.
     // winner.innerHTML = `Race Winner: ${winner}`
 
+    const p1name = result.MRData.RaceTable.Races[0].Results[0].Driver.givenName
+    const p1surname = result.MRData.RaceTable.Races[0].Results[0].Driver.familyName
+    const p1constructor = result.MRData.RaceTable.Races[0].Results[0].Constructor.name
+    const p1nationality = result.MRData.RaceTable.Races[0].Results[0].Driver.nationality
+
+    winner.innerHTML = `Winner: ${p1name} ${p1surname} (${p1nationality}) - ${p1constructor}`
+    
     // const name = pokemon.name
     // pokeName.innerHTML = `Name : ${name}`
 
