@@ -1,7 +1,7 @@
 // Function to get information from F1 API:
 async function getResult(roundNumber, year){
     try {
-        const response = await axios.get(`http://ergast.com/api/f1/${year}/${roundNumber}/results`)
+        const response = await axios.get(`http://ergast.com/api/f1/${year}/${roundNumber}/results.json`)
         return response.data
     } catch {
         return null
@@ -25,8 +25,9 @@ searchBtn.addEventListener("click", async () => {
 
     // Get top level result data
     const result = await getResult(roundSelected.value, yearSelected.value)
+    // jsonResult = JSON.parse(result)
 
-    console.log(result)
+    console.dir(result.MRData.RaceTable.Races[0].Results[0].Driver.driverId)
 
     // Get result detail
     // const winner = result.
