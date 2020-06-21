@@ -1,7 +1,7 @@
 // Function to get information from F1 API:
 async function getResult(roundNumber, year){
     try {
-        const response = await axios.get(`http://ergast.com/api/f1/${year}/${roundNumber}/results.json`)
+        const response = await axios.get(`https://ergast.com/api/f1/${year}/${roundNumber}/results.json`)
         return response.data
     } catch {
         return null
@@ -10,7 +10,7 @@ async function getResult(roundNumber, year){
 
 async function getQualy(roundNumber, year){
     try {
-        const response = await axios.get(`http://ergast.com/api/f1/${year}/${roundNumber}/qualifying.json`)
+        const response = await axios.get(`https://ergast.com/api/f1/${year}/${roundNumber}/qualifying.json`)
         return response.data
     } catch {
         return null
