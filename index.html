@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -47,5 +47,100 @@
     <p id="tenth">10th: </p>  
 
     <script src="api.js"></script>    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>F1 API</title>
+    <!-- <link rel="stylesheet" type="text/css" href="f1.css"> -->
+    <link href="f1.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a> -->
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li> -->
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Event search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container d-flex h-100 align-items-center">
+            <div class="mx-auto text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Formula 1 Results API</h1>
+                <h3 class="text-white-50 mx-auto mt-2 mb-5">Results include a full history of the World Championships from 1950.</br></br> The rules relating to points scoring positions have changed multiple times; the results below reflect the more recent trend of giving points to the top 10 and not just the top 6. </br></br> Qualifying (i.e. pole position) results are only avaialable from around the year 1994 onwards.</h2>
+                <!-- <a class="btn btn-primary js-scroll-trigger" href="#about">Get Started</a> -->
+            </div>
+        </div>
+    </header>
+
+    </section>
+    <!-- Signup-->
+    <section class="signup-section" id="signup">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
+                    <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                    <h3 class="text-white mb-5">Enter the year and round number:</h3>
+                    <form class="form-inline d-flex">
+
+                      <input type="text" id="year-bar" placeholder="Year">
+                      <input type="text" id="event-bar" placeholder="Round number">
+                      <button class="btn btn-primary mx-auto" id="search-btn">Search</button>
+
+
+                    </form>
+                    </br>
+                    <h2 class="text-white mb-5">Grand Prix details</h2>
+                    <p class="text-white mb-5" id="host">Host country: </p>
+                    <p class="text-white mb-5" id="circuit">Circuit name: </p>
+                    <p class="text-white mb-5" id="laps">Laps: </p>
+
+                    <p class="text-white mb-5" id="pole">Pole Position: </p>
+
+                    <h2 class="text-white mb-5" >Podium</h2>
+                    <p class="text-white mb-5" id="winner">Winner: </p>
+                    <p class="text-white mb-5" id="second">Runner up: </p>
+                    <p class="text-white mb-5" id="third">Third place: </p>
+
+                    <h2 class="text-white mb-5" >Points scoring positions</h2>
+                    <p class="text-white mb-5" id="fourth">4th: </p>
+                    <p class="text-white mb-5" id="fifth">5th: </p>
+                    <p class="text-white mb-5" id="sixth">6th: </p>
+                    <p class="text-white mb-5" id="seventh">7th: </p>
+                    <p class="text-white mb-5" id="eigth">8th: </p>
+                    <p class="text-white mb-5" id="ninth">9th: </p>
+                    <p class="text-white mb-5" id="tenth">10th: </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <!-- <script src="js/scripts.js"></script> -->
+  
+    <script src="api.js"></script>
+
 </body>
 </html>
