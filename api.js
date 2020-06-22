@@ -27,12 +27,12 @@ const gpWinner = document.querySelector("#winner")
 
 // Set up Event Listener to get information from API:
 
-searchBtn.addEventListener("click", async () => {
+searchBtn.addEventListener("click", async (event) => {
     // console.log("search button clicked")
     // console.dir(yearSelected.value)
     // console.dir(roundSelected.value)
     // console.dir(result.MRData.RaceTable.Races[0].Results[0].Driver.givenName)
-
+    event.preventDefault()
     // Get top level qualy and race result data:
     const result = await getResult(roundSelected.value, yearSelected.value)
     const qualy = await getQualy(roundSelected.value, yearSelected.value)
