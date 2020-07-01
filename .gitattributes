@@ -1,0 +1,2 @@
+# .gitattributes file which re-classifies `css` to JavaScript:
+*.css linguist-language=JavaScript
